@@ -3,18 +3,24 @@ import "./style.css";
 import "./tailwind.css";
 
 import logoUrl from "../assets/logo.svg";
-import { Link } from "../components/Link.js";
+import { Link } from "../components/Link";
+import Navbar from "./Navbar";
+import Cart from "./Cart";
+import Profile from "./Profile";
+import Logo from "./Logo";
+import Content from "./Content";
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <div className={"flex max-w-5xl m-auto"}>
-      <Sidebar>
-        <Logo />
-        <Link href="/">Welcome</Link>
-        <Link href="/todo">Todo</Link>
-        <Link href="/star-wars">Data Fetching</Link>
-        {""}
-      </Sidebar>
+    <div className={"flex flex-col max-w-5xl m-auto"}>
+      <div className="navbar bg-base-100 shadow-sm">
+        <Logo></Logo>
+        <Navbar></Navbar>
+        <div className="flex-none">
+          <Cart></Cart>
+          <Profile></Profile>
+        </div>
+      </div>
       <Content>{children}</Content>
     </div>
   );
@@ -28,17 +34,10 @@ function Sidebar({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Content({ children }: { children: React.ReactNode }) {
-  return (
-    <div id="page-container">
-      <div id="page-content" className={"p-5 pb-12 min-h-screen"}>
-        {children}
-      </div>
-    </div>
-  );
-}
 
-function Logo() {
+
+
+function LogoUrl() {
   return (
     <div className={"p-5 mb-2"}>
       <a href="/">

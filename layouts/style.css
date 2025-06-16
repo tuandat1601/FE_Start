@@ -9,6 +9,13 @@ a {
 #sidebar a.is-active {
   background-color: #eee;
 }
+#navbar a {
+  padding: 2px 10px;
+  margin-left: -10px;
+}
+#navbar a.is-active {
+  background-color: #eee;
+}
 
 /* Reset */
 body {
