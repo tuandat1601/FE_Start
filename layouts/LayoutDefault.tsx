@@ -13,7 +13,7 @@ import Content from "./Content";
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
     <div className={"flex flex-col max-w-5xl m-auto"}>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm flex flex-row gap-6 items-center px-6 py-3 bg-white text-black">
         <Logo></Logo>
         <Navbar></Navbar>
         <div className="flex-none">
@@ -33,9 +33,6 @@ function Sidebar({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-
-
 
 function LogoUrl() {
   return (
