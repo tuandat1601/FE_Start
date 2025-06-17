@@ -25,21 +25,3 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
     </div>
   );
 }
-
-function Sidebar({ children }: { children: React.ReactNode }) {
-  return (
-    <div id="sidebar" className={"p-5 flex flex-col shrink-0 border-r-2 border-r-gray-200"}>
-      {children}
-    </div>
-  );
-}
-
-function LogoUrl() {
-  return (
-    <div className={"p-5 mb-2"}>
-      <a href="/">
-        <img src={logoUrl} height={64} width={64} alt="logo" />
-      </a>
-    </div>
-  );
-}
